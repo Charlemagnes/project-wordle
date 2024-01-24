@@ -7,8 +7,8 @@ function Guess({word, empty}){
     // return <></>
     return <p className='guess'>
         {wordArr.map((el, i) => {
-            const letter = empty ? '' : el;
-            return <span className='cell' key={i}>{letter}</span>
+            const letter = empty ? '' : el.letter;
+            return <span className={`cell ${el.status ?? ''}`} key={i}>{letter}</span>
         })}
     </p>
 }
