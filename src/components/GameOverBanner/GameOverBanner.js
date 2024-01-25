@@ -13,7 +13,7 @@ function GameOverBanner({numOfGuesses, answer, gameStatus, restartGame}) {
     </div>
     {gameStatus === 1 ? <p>
                 <strong>Congratulations!</strong> Got it in
-                <strong> {numOfGuesses} guesses</strong>.
+                <strong> {numOfGuesses} guess{numOfGuesses > 1 ? 'es' : ''}</strong>.
               </p> : <p>Sorry, the correct answer is <strong>{answer}</strong>.</p>}
   </div>
 }
